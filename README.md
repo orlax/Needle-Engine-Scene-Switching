@@ -1,8 +1,14 @@
 # Needle-Engine-Scene-Switching
 A repository for testing of the Needle engine Scene switching capabilities. 
 
+some caveats to take into account: 
 
-Right now even the most basic scene switching test is broken, trying to use this script: 
+- Having two gltfObject components nested and with the same name will cause problems. For example if you have a scene with a gltfObject called "sceneRoot" and one of the loaded scenes has another gltfObject with the same name it will cause issues. 
+- In fact, the other scenes you are loading do not need to have an gltfObject or needle exporter component. they can just be Loose game objects. 
+
+![needleSceneSwitchingExp](https://user-images.githubusercontent.com/2174663/223844552-5b51e0fd-7fe0-4a82-8502-ef6efc1b467d.jpg)
+
+This is the example script that will result in being able to load multiple scenes in needle. the advantage of this is that we can leverage unity lightmaps for different scenes. 
 
     import { AssetReference, Behaviour, GameObject, serializeable, showBalloonMessage } from "@needle-tools/engine";
     import { InputEvents } from "@needle-tools/engine/engine/engine_input";
@@ -86,10 +92,4 @@ Right now even the most basic scene switching test is broken, trying to use this
               setParamWithoutReload("level", index.toString());
           }
       }
-    }
-
-results in this Error: 
-![image](https://user-images.githubusercontent.com/2174663/223823564-c677b8ea-9f75-4a27-9eb0-95287d038c21.png)
-
-
-The original error I was having was that the scene will actually load but only the last scene in the scene array and not any other. 
+    } 
