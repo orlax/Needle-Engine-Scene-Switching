@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &1
 MonoBehaviour:
-  m_ObjectHideFlags: 61
+  m_ObjectHideFlags: 53
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -15,9 +15,9 @@ MonoBehaviour:
   localRuntimePackage: Library/PackageCache/com.needle.engine@2.63.0-pre/package~
   localThreejsPackage: Library/PackageCache/com.needle.engine@2.63.0-pre/package~/node_modules/three
   overrideEnterPlaymode: 1
-  smartExport: 0
-  debugMode: 0
-  generateReport: 0
+  smartExport: 1
+  debugMode: 1
+  generateReport: 1
   allowRunningProjectFixes: 1
   npmSearchPathDirectories: []
   useHotReload: 1

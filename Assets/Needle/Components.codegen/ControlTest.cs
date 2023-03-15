@@ -13,6 +13,7 @@ namespace Needle.Typescript.GeneratedComponents
 		public UnityEngine.Vector3 @speed = new UnityEngine.Vector3();
 		public void update(){}
 		public void CheckOnlyForward(){}
+		public void CheckWithSphere(){}
 		public void CheckWithRays(){}
 	}
 }
