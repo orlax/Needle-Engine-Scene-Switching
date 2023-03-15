@@ -35,5 +35,9 @@ MonoBehaviour:
   - Path: Assets/Scenes/Minimal.unity
     Projects: []
     BuilderScene: 
+  - Path: Assets/Scenes/MainScene.unity
+    Projects:
+    - ProjectPath: Library/Empty
+    BuilderScene: 
   Projects:
   - ProjectPath: Library/Empty
